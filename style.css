@@ -6,22 +6,24 @@ html, body {
     padding: 0;
     height: 100%;
     text-align: center;
-    display: flex; /* Flexbox a középre igazításhoz */
+    display: flex;
+    flex-direction: column; /* Álló elrendezéshez optimalizált */
     justify-content: center;
     align-items: center;
     box-sizing: border-box;
-    overflow: hidden; /* Csúszka elrejtése */
+    overflow: hidden; /* Görgetés tiltása */
 }
 
 .header {
-    color: #fff; /* Fehér szöveg */
+    color: #fff;
     text-align: center;
-    font-size: 24px; /* Nagyobb fejléc */
-    width: 100%; /* Teljes szélesség */
+    font-size: 24px;
+    width: 100%;
     position: absolute;
     top: 0;
     left: 0;
-    padding: 20px 0; /* Párnázás a jobb megjelenésért */
+    padding: 15px 0;
+    background: rgba(0, 0, 0, 0.8);
 }
 
 .content {
@@ -31,35 +33,37 @@ html, body {
     align-items: center;
     text-align: center;
     width: 100%;
-    height: 100%; /* Teljes magasság */
-    padding: 0;
+    height: 100%;
+    padding: 50px 0 10px; /* Fejléc miatt van extra padding */
     box-sizing: border-box;
 }
 
 .table-container {
-    width: auto; /* A táblázat automatikusan igazodik a tartalomhoz */
-    max-width: 90%; /* Limitált szélesség */
-    height: 75%;
-    padding: 0;
-    box-sizing: border-box;
+    width: 90vw; /* Teljes kijelző szélesség álló módban */
+    height: 80vh; /* Kitölti a kijelzőt függőlegesen */
+    max-height: 90vh;
+    overflow-y: auto; /* Görgethető, ha kell */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 table {
-    width: auto; /* Automatikusan igazodik a tartalomhoz */
-    margin: 0 auto; /* Középre igazítás */
+    width: 100%;
+    max-width: 700px; /* Nem lesz túl széles nagy képernyőn */
+    height: auto;
+    border-collapse: separate;
+    border-spacing: 0 8px;
 }
 
 th, td {
-    font-size: 20px; /* Szöveg mérete */
-    font-weight: bold; /* Szöveg vastagsága */
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px;
+    border: 1px solid #444;
 }
 
-.small-gray-text {
-    color: #808080; /* Szürke szöveg (hexadecimális kód) */
-    font-size: 16px; /* Kisebb betűméret */
-    font-style: italic; /* (Opcionális) dőlt betű a kiemeléshez */
-}
-table {
-    border-collapse: separate; /* Fontos: külön tartja a cellákat */
-    border-spacing: 0 8px; /* Az első érték (0) a vízszintes térköz, a második (8px) a függőleges */
+.loading {
+    font-size: 20px;
+    color: #aaa;
 }

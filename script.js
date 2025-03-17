@@ -34,6 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
             loadingText.style.display = "none";
             table.style.display = "table";
 
+            // Fejléc létrehozása
             tableHeader.innerHTML = "";
             data[0].forEach(header => {
                 const th = document.createElement("th");
@@ -41,19 +42,24 @@ document.addEventListener("DOMContentLoaded", function () {
                 tableHeader.appendChild(th);
             });
 
+            // Sorok létrehozása
+            tableBody.innerHTML = "";
+            data.slice(1).forEach(row => { // Kezdjük a második sortól
+                const tr = document.createElement("tr");
+
                 row.forEach(cell => {
                     const td = document.createElement("td");
 
-                    // Feltételes formázás: Keresés meghatározott szövegre
+                    // Feltételes formázás meghatározott szövegekhez
                     if (
-    cell.includes("Leves + Második") || 
-    cell.includes("CSAK LEVES (1.150 Ft)") || 
-    cell.includes("CSAK MÁSODIK (2.300 Ft)")
-) {
-    td.classList.add("small-gray-text"); // Szürke és kisebb szöveg formázása
+                        cell.includes("Leves + Második") || 
+                        cell.includes("CSAK LEVES (1.150 Ft)") || 
+                        cell.includes("CSAK MÁSODIK (2.300 Ft)")
+                    ) {
+                        td.classList.add("small-gray-text"); // Szürke és kisebb szöveg formázása
                     }
 
-                    // Ellenőrizzük, hogy a cella tartalma URL-e
+                    // Ellenőrizzük, hogy a cella URL-e
                     if (isValidURL(cell)) {
                         const a = document.createElement("a");
                         a.href = cell;

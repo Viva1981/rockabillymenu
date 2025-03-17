@@ -38,8 +38,8 @@ html, body {
 
 .table-container {
     width: auto; /* A táblázat automatikusan igazodik a tartalomhoz */
-    max-width: 80%; /* Limitált szélesség */
-    height: 85%;
+    max-width: 85%; /* Limitált szélesség */
+    height: 80%;
     padding: 0;
     box-sizing: border-box;
 }
@@ -50,13 +50,13 @@ table {
 }
 
 th, td {
-    font-size: 60px; /* Szöveg mérete */
+    font-size: 68px; /* Szöveg mérete */
     font-weight: bold; /* Szöveg vastagsága */
 }
 
 .small-gray-text {
     color: #808080; /* Szürke szöveg (hexadecimális kód) */
-    font-size: 56px; /* Kisebb betűméret */
+    font-size: 60px; /* Kisebb betűméret */
     font-style: italic; /* (Opcionális) dőlt betű a kiemeléshez */
 }
 table {

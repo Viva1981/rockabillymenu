@@ -16,7 +16,7 @@ html, body {
 .header {
     color: #fff; /* Fehér szöveg */
     text-align: center;
-    font-size: 24px; /* Nagyobb fejléc */
+    font-size: 44px; /* Nagyobb fejléc */
     width: 100%; /* Teljes szélesség */
     position: absolute;
     top: 0;
@@ -50,13 +50,13 @@ table {
 }
 
 th, td {
-    font-size: 20px; /* Szöveg mérete */
+    font-size: 40px; /* Szöveg mérete */
     font-weight: bold; /* Szöveg vastagsága */
 }
 
 .small-gray-text {
     color: #808080; /* Szürke szöveg (hexadecimális kód) */
-    font-size: 16px; /* Kisebb betűméret */
+    font-size: 36px; /* Kisebb betűméret */
     font-style: italic; /* (Opcionális) dőlt betű a kiemeléshez */
 }
 table {

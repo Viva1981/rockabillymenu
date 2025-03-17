@@ -55,6 +55,10 @@ th, td {
 
 .small-gray-text {
     color: #808080; /* Szürke szöveg (hexadecimális kód) */
-    font-size: 14px; /* Kisebb betűméret */
+    font-size: 16px; /* Kisebb betűméret */
     font-style: italic; /* (Opcionális) dőlt betű a kiemeléshez */
+}
+table {
+    border-collapse: separate; /* Fontos: külön tartja a cellákat */
+    border-spacing: 0 8px; /* Az első érték (0) a vízszintes térköz, a második (8px) a függőleges */
 }

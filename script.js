@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }).then(function () {
             console.log("Google Sheets API betöltve!");
             loadSheetData();
-            setInterval(loadSheetData, 30000);
+            setInterval(loadSheetData, 30000); // 30 másodpercenként frissítés
         }).catch(function (error) {
             console.error("Hiba az API inicializálásában:", error);
             document.querySelector('.loading').textContent = "❌ API inicializációs hiba!";
@@ -58,6 +58,11 @@ document.addEventListener("DOMContentLoaded", function () {
                 row.forEach(cell => {
                     const td = document.createElement("td");
 
+                    // Feltételes formázás: Keresés meghatározott szövegre
+                    if (cell.includes("Leves + Második")) {
+                        td.classList.add("small-gray-text"); // Szürke és kisebb szöveg formázása
+                    }
+
                     // Ellenőrizzük, hogy a cella tartalma URL-e
                     if (isValidURL(cell)) {
                         const a = document.createElement("a");
@@ -94,4 +99,3 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 });
-

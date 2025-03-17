@@ -1,101 +1,68 @@
 html, body {
     font-family: 'Montserrat', Arial, sans-serif;
-    background-color: #f8f9fa;
+    background-color: #000; /* Fekete háttér */
+    color: #fff; /* Fehér szöveg */
     margin: 0;
     padding: 0;
     height: 100%;
     text-align: center;
-    box-sizing: border-box;
-    overflow: hidden; /* Csúszka elrejtése a főoldalról */
-}
-
-.header {
-    background-color: #E63950;
-    padding: 10px;
-    color: white;
-    display: flex;
-    align-items: center;
+    display: flex; /* Flexbox a középre igazításhoz */
     justify-content: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 80px;
-    z-index: 1000;
-    margin-bottom: 10px;
-}
-.header img {
-    height: 50px;
-    margin-right: 10px;
+    align-items: center;
+    box-sizing: border-box;
+    overflow: hidden; /* Csúszka elrejtése */
 }
 
 .content {
-    padding: 0; /* Kivesszük a felesleges padding-et */
-    padding-top: 95px; 
-    box-sizing: border-box;
-    height: calc(100vh - 80px); /* A fejléc levonásával a maradék hely kitöltése */
-    overflow: hidden; /* Nem akarunk extra görgetést */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.table-container {
-    width: 100%;
-    max-width: 100%;
-    height: 100%; /* Kitölti a teljes content magasságot */
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
-    justify-content: flex-start; /* Fontos: így a táblázat a tetején kezdődik */
-    padding: 10px;
-    overflow: auto; /* Görgethető, ha szükséges */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%; /* Teljes szélesség */
+    height: 100%; /* Teljes magasság */
+    padding: 0;
     box-sizing: border-box;
 }
 
-/* Mobilbarát megjelenítés */
-@media (max-width: 768px) {
-    .table-container {
-        overflow-x: auto; /* Vízszintes görgetés engedélyezése */
-        align-items: flex-start; /* Balra igazítja a tartalmat */
-    }
-}
-.special-row {
-    background-color: #E63950 !important;
-    color: white !important;
-    font-weight: bold;
-    border-bottom: 4px solid black !important;
+.table-container {
+    width: auto; /* Az asztal tartalmához igazodik */
+    max-width: 80%; /* Limitált szélesség, hogy ne legyen túl széles */
+    background: transparent; /* Átlátszó háttér */
+    padding: 0;
+    box-sizing: border-box;
 }
 
 table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 0;
-    background: #fff; /* Táblázat háttér beállítása */
+    margin: 0 auto; /* Középre igazítás */
+    background: transparent; /* Átlátszó háttér */
 }
 
 th, td {
     padding: 12px;
-    text-align: left;
-    border-bottom: 1px solid #ddd;
+    text-align: center; /* Középre igazított szöveg */
+    color: #fff; /* Fehér szöveg */
+    border: 1px solid #fff; /* Fehér szegély */
 }
 
 th {
-    background-color: #E63950;
-    color: white;
+    font-weight: bold;
+    font-size: 20px; /* Nagyobb betűméret a fejlécekhez */
+    border-bottom: 2px solid #fff; /* Kiemeltebb szegély */
 }
 
 tr:nth-child(even) {
-    background-color: #f2f2f2;
+    background-color: rgba(255, 255, 255, 0.1); /* Halvány fehér sávváltás */
 }
 
 tr:hover {
-    background-color: #ddd;
+    background-color: rgba(255, 255, 255, 0.2); /* Hover effekt */
 }
 
 .loading {
-    font-size: 18px;
-    color: #E63950;
+    font-size: 20px;
+    color: #fff; /* Fehér szöveg a töltési üzenethez */
     margin-top: 20px;
 }

@@ -16,7 +16,7 @@ html, body {
 .header {
     color: #fff; /* Fehér szöveg */
     text-align: center;
-    font-size: 68px; /* Nagyobb fejléc */
+    font-size: 4rem; /* Nagyobb fejléc, reszponzív méret */
     width: 100%; /* Teljes szélesség */
     position: absolute;
     top: 0;
@@ -30,36 +30,66 @@ html, body {
     justify-content: center;
     align-items: center;
     text-align: center;
-    width: 100%;
-    height: 100%; /* Teljes magasság */
+    width: 90%; /* Rugalmas szélesség */
+    max-width: 1080px; /* Maximum szélesség */
+    height: auto;
     padding: 0;
     box-sizing: border-box;
 }
 
 .table-container {
-    width: auto; /* A táblázat automatikusan igazodik a tartalomhoz */
-    max-width: 85%; /* Limitált szélesség */
-    height: 80%;
+    width: 100%; /* Reszponzív szélesség */
+    max-width: 85%; /* Limitált szélesség nagy kijelzőkön */
+    height: auto;
     padding: 0;
     box-sizing: border-box;
 }
 
 table {
-    width: auto; /* Automatikusan igazodik a tartalomhoz */
+    width: 100%; /* Rugalmas táblázatszélesség */
     margin: 0 auto; /* Középre igazítás */
+    border-collapse: separate; /* Fontos: külön tartja a cellákat */
+    border-spacing: 0 15px; /* A cellák közötti térköz */
 }
 
 th, td {
-    font-size: 68px; /* Szöveg mérete */
+    font-size: 3rem; /* Szöveg mérete relatív egységben */
     font-weight: bold; /* Szöveg vastagsága */
+    text-align: center;
 }
 
 .small-gray-text {
-    color: #808080; /* Szürke szöveg (hexadecimális kód) */
-    font-size: 60px; /* Kisebb betűméret */
+    color: #808080; /* Szürke szöveg */
+    font-size: 2.5rem; /* Kisebb betűméret */
     font-style: italic; /* (Opcionális) dőlt betű a kiemeléshez */
 }
-table {
-    border-collapse: separate; /* Fontos: külön tartja a cellákat */
-    border-spacing: 0 15px; /* Az első érték (0) a vízszintes térköz, a második (8px) a függőleges */
+
+/* Reszponzív design - kisebb kijelzőkhöz (például telefonok) */
+@media (max-width: 768px) {
+    .header {
+        font-size: 3rem; /* Kisebb fejléc betűméret */
+    }
+
+    th, td {
+        font-size: 2rem; /* Táblázat kisebb szövegmérete */
+    }
+
+    .small-gray-text {
+        font-size: 1.8rem; /* Még kisebb szövegméret szürkéhez */
+    }
+}
+
+/* Reszponzív design - nagyobb kijelzőkhöz (például 4K monitor) */
+@media (min-width: 2560px) {
+    .header {
+        font-size: 5rem; /* Nagyobb fejléc betűméret 4K-hoz */
+    }
+
+    th, td {
+        font-size: 4rem; /* Táblázat nagyobb szövegmérete */
+    }
+
+    .small-gray-text {
+        font-size: 3.5rem; /* Nagyobb szövegméret szürkéhez */
+    }
 }

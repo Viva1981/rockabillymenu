@@ -39,7 +39,7 @@ html, body {
 .table-container {
     width: auto; /* A táblázat automatikusan igazodik a tartalomhoz */
     max-width: 90%; /* Limitált szélesség */
-    height: 80%;
+    height: 75%;
     padding: 0;
     box-sizing: border-box;
 }

@@ -38,7 +38,8 @@ html, body {
 
 .table-container {
     width: auto; /* A táblázat automatikusan igazodik a tartalomhoz */
-    max-width: 80%; /* Limitált szélesség */
+    max-width: 100%; /* Limitált szélesség */
+    height: 100%;
     padding: 0;
     box-sizing: border-box;
 }

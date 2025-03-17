@@ -1,69 +1,34 @@
-html, body {
-    font-family: 'Montserrat', Arial, sans-serif;
-    background-color: #000; /* Fekete háttér */
-    color: #fff; /* Fehér szöveg */
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    text-align: center;
-    display: flex;
-    flex-direction: column; /* Álló elrendezéshez optimalizált */
-    justify-content: center;
-    align-items: center;
-    box-sizing: border-box;
-    overflow: hidden; /* Görgetés tiltása */
-}
-
-.header {
-    color: #fff;
-    text-align: center;
-    font-size: 24px;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    padding: 15px 0;
-    background: rgba(0, 0, 0, 0.8);
-}
-
-.content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    width: 100%;
-    height: 100%;
-    padding: 50px 0 10px; /* Fejléc miatt van extra padding */
-    box-sizing: border-box;
-}
-
 .table-container {
-    width: 90vw; /* Teljes kijelző szélesség álló módban */
-    height: 80vh; /* Kitölti a kijelzőt függőlegesen */
-    max-height: 90vh;
-    overflow-y: auto; /* Görgethető, ha kell */
+    width: 100vw; /* Teljes szélesség */
+    height: 100vh; /* Teljes magasság */
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow-y: auto; /* Görgethető, ha sok sor van */
+    padding: 20px 0;
+    box-sizing: border-box;
 }
 
 table {
-    width: 100%;
-    max-width: 700px; /* Nem lesz túl széles nagy képernyőn */
-    height: auto;
+    width: 90%; /* A táblázat ne legyen túl széles */
+    max-width: 1200px; /* Maximális szélesség nagyobb kijelzőkhöz */
+    height: auto; /* Magasság automatikusan igazodik */
     border-collapse: separate;
-    border-spacing: 0 8px;
+    border-spacing: 0 8px; /* Sorok közötti térköz megmarad */
 }
 
+/* Fejléc és cellák formázása */
 th, td {
-    font-size: 18px;
+    font-size: 20px;
     font-weight: bold;
     padding: 10px;
-    border: 1px solid #444;
 }
 
-.loading {
-    font-size: 20px;
-    color: #aaa;
+/* Szürke háttér megmarad */
+tr:nth-child(even) {
+    background-color: #222; /* Sötétszürke */
+}
+
+tr:nth-child(odd) {
+    background-color: #000; /* Fekete */
 }

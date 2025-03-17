@@ -6,9 +6,6 @@ html, body {
     padding: 0;
     height: 100%;
     text-align: center;
-    display: flex; /* Flexbox a középre igazításhoz */
-    justify-content: center;
-    align-items: center;
     box-sizing: border-box;
     overflow: hidden; /* Csúszka elrejtése */
 }
@@ -16,80 +13,52 @@ html, body {
 .header {
     color: #fff; /* Fehér szöveg */
     text-align: center;
-    font-size: 4rem; /* Nagyobb fejléc, reszponzív méret */
+    font-size: 4rem; /* Nagyobb fejléc méret */
     width: 100%; /* Teljes szélesség */
-    position: absolute;
+    position: fixed; /* Fix pozíció, hogy mindig látható maradjon */
     top: 0;
     left: 0;
     padding: 20px 0; /* Párnázás a jobb megjelenésért */
+    background-color: #000; /* Háttér szín biztosítása, ha az oldal görgethető */
+    z-index: 1000; /* A header rétege legyen a legfelső */
 }
 
 .content {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start; /* A tartalom a tetejéről induljon */
     align-items: center;
     text-align: center;
-    width: 90%; /* Rugalmas szélesség */
-    max-width: 1080px; /* Maximum szélesség */
+    width: 90%;
+    max-width: 1080px;
     height: auto;
+    margin-top: 120px; /* A header magasságával megegyező margó */
     padding: 0;
     box-sizing: border-box;
 }
 
 .table-container {
-    width: 100%; /* Reszponzív szélesség */
-    max-width: 85%; /* Limitált szélesség nagy kijelzőkön */
-    height: auto;
+    width: 100%; /* Rugalmas szélesség */
+    max-width: 85%; /* Limitált szélesség nagy kijelzőknél */
     padding: 0;
     box-sizing: border-box;
 }
 
 table {
-    width: 100%; /* Rugalmas táblázatszélesség */
+    width: 100%; /* Táblázat szélessége rugalmasan */
     margin: 0 auto; /* Középre igazítás */
-    border-collapse: separate; /* Fontos: külön tartja a cellákat */
-    border-spacing: 0 15px; /* A cellák közötti térköz */
+    border-collapse: separate;
+    border-spacing: 0 15px;
 }
 
 th, td {
-    font-size: 3rem; /* Szöveg mérete relatív egységben */
-    font-weight: bold; /* Szöveg vastagsága */
+    font-size: 3rem; /* Szöveg mérete relatív egységgel */
+    font-weight: bold;
     text-align: center;
 }
 
 .small-gray-text {
     color: #808080; /* Szürke szöveg */
     font-size: 2.5rem; /* Kisebb betűméret */
-    font-style: italic; /* (Opcionális) dőlt betű a kiemeléshez */
-}
-
-/* Reszponzív design - kisebb kijelzőkhöz (például telefonok) */
-@media (max-width: 768px) {
-    .header {
-        font-size: 3rem; /* Kisebb fejléc betűméret */
-    }
-
-    th, td {
-        font-size: 2rem; /* Táblázat kisebb szövegmérete */
-    }
-
-    .small-gray-text {
-        font-size: 1.8rem; /* Még kisebb szövegméret szürkéhez */
-    }
-}
-
-/* Reszponzív design - nagyobb kijelzőkhöz (például 4K monitor) */
-@media (min-width: 2560px) {
-    .header {
-        font-size: 5rem; /* Nagyobb fejléc betűméret 4K-hoz */
-    }
-
-    th, td {
-        font-size: 4rem; /* Táblázat nagyobb szövegmérete */
-    }
-
-    .small-gray-text {
-        font-size: 3.5rem; /* Nagyobb szövegméret szürkéhez */
-    }
+    font-style: italic;
 }

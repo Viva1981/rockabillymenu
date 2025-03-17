@@ -46,3 +46,12 @@ html, body {
 table {
     width: auto; /* Automatikusan igazodik a tartalomhoz */
     margin: 0 auto
+table {
+    width: auto; /* Automatikusan igazodik a tartalomhoz */
+    margin: 0 auto;
+}
+
+th, td {
+    font-size: 20px; /* Szöveg mérete */
+    font-weight: bold; /* Szöveg vastagsága */
+}

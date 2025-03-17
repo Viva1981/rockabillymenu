@@ -39,7 +39,7 @@ html, body {
 
 .table-container {
     width: 100%; /* Reszponzív szélesség */
-    max-width: 85%; /* Limitált szélesség nagy kijelzőkön */
+    max-width: 90%; /* Limitált szélesség nagy kijelzőkön */
     height: auto;
     padding: 0;
     box-sizing: border-box;

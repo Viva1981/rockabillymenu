@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
     gapi.load("client", function () {
         gapi.client.init({
-            apiKey: 'AIzaSyBCqmOG3VAy21KJ0C8UV-Buh3Orc1-igKI',
+            apiKey: 'AIzaSyC28fhiSrVfGENLAttslI8hlaoaiJ0Vkf0',
             discoveryDocs: ["https://sheets.googleapis.com/$discovery/rest?version=v4"]
         }).then(function () {
             console.log("Google Sheets API betöltve!");

@@ -41,20 +41,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 tableHeader.appendChild(th);
             });
 
-            tableBody.innerHTML = "";
-            data.slice(1).forEach((row, index) => {
-                const tr = document.createElement("tr");
-
-                // Első sor stílusának beállítása
-                if (index === 0) {
-                    tr.classList.add('header-row-1');
-                }
-
-                // "Egyéb Projekt" és "Menü" sorok stílusának beállítása
-                if (row[0]?.trim() === "Egyéb Projekt" || row[0]?.trim() === "Menü") {
-                    tr.classList.add('special-row');
-                }
-
                 row.forEach(cell => {
                     const td = document.createElement("td");
 

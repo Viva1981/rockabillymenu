@@ -1,0 +1,101 @@
+html, body {
+    font-family: 'Montserrat', Arial, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    text-align: center;
+    box-sizing: border-box;
+    overflow: hidden; /* Csúszka elrejtése a főoldalról */
+}
+
+.header {
+    background-color: #E63950;
+    padding: 10px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    z-index: 1000;
+    margin-bottom: 10px;
+}
+.header img {
+    height: 50px;
+    margin-right: 10px;
+}
+
+.content {
+    padding: 0; /* Kivesszük a felesleges padding-et */
+    padding-top: 95px; 
+    box-sizing: border-box;
+    height: calc(100vh - 80px); /* A fejléc levonásával a maradék hely kitöltése */
+    overflow: hidden; /* Nem akarunk extra görgetést */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.table-container {
+    width: 100%;
+    max-width: 100%;
+    height: 100%; /* Kitölti a teljes content magasságot */
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Fontos: így a táblázat a tetején kezdődik */
+    padding: 10px;
+    overflow: auto; /* Görgethető, ha szükséges */
+    box-sizing: border-box;
+}
+
+/* Mobilbarát megjelenítés */
+@media (max-width: 768px) {
+    .table-container {
+        overflow-x: auto; /* Vízszintes görgetés engedélyezése */
+        align-items: flex-start; /* Balra igazítja a tartalmat */
+    }
+}
+.special-row {
+    background-color: #E63950 !important;
+    color: white !important;
+    font-weight: bold;
+    border-bottom: 4px solid black !important;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 0;
+    background: #fff; /* Táblázat háttér beállítása */
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #E63950;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #ddd;
+}
+
+.loading {
+    font-size: 18px;
+    color: #E63950;
+    margin-top: 20px;
+}

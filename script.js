@@ -59,8 +59,12 @@ document.addEventListener("DOMContentLoaded", function () {
                     const td = document.createElement("td");
 
                     // Feltételes formázás: Keresés meghatározott szövegre
-                    if (cell.includes("Leves + Második")) {
-                        td.classList.add("small-gray-text"); // Szürke és kisebb szöveg formázása
+                    if (
+    cell.includes("Leves + Második") || 
+    cell.includes("CSAK LEVES (1.150 Ft)") || 
+    cell.includes("CSAK MÁSODIK (2.300 Ft)")
+) {
+    td.classList.add("small-gray-text"); // Szürke és kisebb szöveg formázása
                     }
 
                     // Ellenőrizzük, hogy a cella tartalma URL-e

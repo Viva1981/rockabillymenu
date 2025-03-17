@@ -16,7 +16,7 @@ html, body {
 .header {
     color: #fff; /* Fehér szöveg */
     text-align: center;
-    font-size: 44px; /* Nagyobb fejléc */
+    font-size: 68px; /* Nagyobb fejléc */
     width: 100%; /* Teljes szélesség */
     position: absolute;
     top: 0;
@@ -38,8 +38,8 @@ html, body {
 
 .table-container {
     width: auto; /* A táblázat automatikusan igazodik a tartalomhoz */
-    max-width: 90%; /* Limitált szélesség */
-    height: 75%;
+    max-width: 80%; /* Limitált szélesség */
+    height: 85%;
     padding: 0;
     box-sizing: border-box;
 }
@@ -50,16 +50,16 @@ table {
 }
 
 th, td {
-    font-size: 40px; /* Szöveg mérete */
+    font-size: 60px; /* Szöveg mérete */
     font-weight: bold; /* Szöveg vastagsága */
 }
 
 .small-gray-text {
     color: #808080; /* Szürke szöveg (hexadecimális kód) */
-    font-size: 36px; /* Kisebb betűméret */
+    font-size: 56px; /* Kisebb betűméret */
     font-style: italic; /* (Opcionális) dőlt betű a kiemeléshez */
 }
 table {
     border-collapse: separate; /* Fontos: külön tartja a cellákat */
-    border-spacing: 0 8px; /* Az első érték (0) a vízszintes térköz, a második (8px) a függőleges */
+    border-spacing: 0 15px; /* Az első érték (0) a vízszintes térköz, a második (8px) a függőleges */
 }
